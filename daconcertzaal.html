@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <title>Deuren Concertzaal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-startup-image" href="launch.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/a5aadcb083.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="headerbox">
+                <div class="header"><a href="index.html"><img src="assets/LOGO_Vooruit_wit.svg"/></a></div>
+        </div>
+        <div class="deurwrapper">
+        <div class="currentpage">concertzaal</div>
+            <div class="deurtable">
+                <div class="deurbody">
+                    <div class="nooddeurknop btn-secondmenu" name="foyer/buiten" description="">foyer/buiten</div>
+                    <div class="nooddeurknop btn-secondmenu" name="foyer/gang" description="sluitplaat">foyer/gang</div>
+                    <div class="nooddeurknop btn-secondmenu" name="foyer/gang" description="pomp">foyer/gang</div>
+                    <div class="nooddeurknop btn-secondmenu" name="deur rokersterras" description="magneet">deur rokersterras</div>
+                    <div class="nooddeurknop btn-secondmenu" name="deur rokersterras" description="nachtschoot">deur rokersterras</div>
+                    <div class="nooddeurknop btn-secondmenu" name="gang/backstage" description="">gang/backstage</div>
+                    <div class="nooddeurknop btn-secondmenu" name="trap naast lift" description="magneet">trap naast lift</div>
+                    <div class="nooddeurknop btn-secondmenu" name="trap naast lift" description="pomp">trap naast lift</div>
+                    <div class="nooddeurknop btn-secondmenu" name="scheldetrap noord" description="">scheldetrap noord</div>
+                    <div class="nooddeurknop btn-secondmenu" name="scheldetrap zuid" description="">scheldetrap zuid</div>
+                    <div class="nooddeurknop btn-secondmenu" name="artiesteningang buiten" description="">artiesteningang buiten</div>
+                    <div class="nooddeurknop btn-secondmenu" name="artiesteningang binnen" description="">artiesteningang binnen</div>
+                    <div class="nooddeurknop btn-secondmenu" name="laad en los" description="pomp">laad en los</div>
+                    <div class="nooddeurknop btn-secondmenu" name="laad en los" description="magneet">laad en los</div>
+
+                    <div class="nooddeurknop btn-secondmenu" name="alle nooddeuren" description="alle nooddeuren">alle nooddeuren</div>
+
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="footer">
+            <div class="back"><script>
+            document.write('<a href="javascript:history.back()"><i class="fas fa-angle-left fa-2x"></i></a>');
+        </script></div>
+            <div class="forward"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>
+            var className = "special-color";
+            var storageName = "colorToggleState";
+            var colorToggleState = JSON.parse(localStorage.getItem(storageName)) || {};
+            $(".btn-secondmenu").addClass(function() {
+                var $this = $(this);
+                var index = $this.index(); // Or use some other more reliable identification of the button
+                if (colorToggleState[index]) {
+                    return className;
+                }
+            });
+            $(".btn-secondmenu").click(function () {
+                var $this = $(this);
+                var index = $this.index(); // Or use some other way of identifying the button
+                colorToggleState[index] = !colorToggleState[index]; // `undefined` is falsy, so this works just fine
+                $this.toggleClass(className, colorToggleState[index]);
+                localStorage.setItem(storageName, JSON.stringify(colorToggleState));
+            });
+        </script>
+    </body>
+</html>

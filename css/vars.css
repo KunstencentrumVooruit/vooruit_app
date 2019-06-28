@@ -1,0 +1,21 @@
+:root {
+  --main-color: #074C71;
+  --main-color-light:#346C8A;
+  --main-color-lightest: #618DA4;
+  --main-purple: #A6728A;
+  --main-color-background: #FFFCF6;
+  --main-yellow: #F0C808;
+  --main-yellow-template:#ffc600;
+  --main-white: #FFFCF6; 
+  --main-black: #272727;
+  --main-jellybean: #E65958;
+  --vooruit-blauw:#29275F;
+  --vooruit-groen:#6FB353;
+  --vooruit-lila:#AB7397;
+  --vooruit-oranje:#DF9130;
+  --text-color: rgb(255, 255, 255);
+  --gray-light-color: #d2d2d2;
+  --weight-regular: 300;
+  --weight-bold: 700;
+  
+}
